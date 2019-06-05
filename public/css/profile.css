@@ -1,0 +1,174 @@
+.profile--container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.profile {
+    color: #B5C598;
+    margin: 10px 0 0 10px;
+    width: 15%;
+}
+
+.profile .name {
+    justify-content: center;
+}
+
+.profile .email {
+    margin: 5px 0 0 0;
+}
+
+.image {
+    /* background-image: url('http://i.stack.imgur.com/Dj7eP.jpg'); */
+    
+    /* make a square container */
+    width: 75px;
+    height: 75px;
+    margin: 5px 0 0 0;
+    /* fill the container, preserving aspect ratio, and cropping to fit */
+    background-size: cover;
+
+    /* center the image vertically and horizontally */
+    background-position: top center;
+
+    /* round the edges to a circle with border radius 1/2 container size */
+    border-radius: 50%;
+}
+
+.input {
+    width: 40%;
+}
+
+
+#tasklist {
+    width: 100%;
+    height: 63%;
+    overflow: hidden;
+}
+
+
+.task {
+    width: 55%;
+    display: flex;
+    color:rgb(112, 46, 139);;
+    margin: 0 auto 0 auto;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.taskinput {
+    text-align: center;
+}   
+
+.task > div:first-of-type {
+    display: flex;
+    /* margin: 0 auto;      */
+}
+
+.task > div:nth-of-type(2) {
+    display: flex;
+    /* margin: 0 auto;      */
+}
+
+.task > button {
+    width: 20%;
+    /* margin: 0 10px; */
+    background-color:rgb(112, 46, 139); /* Green */
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    /* text-align: center; */
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 12px;
+    /* align-self: center; */
+    /* margin: 0 auto; */
+    cursor: pointer;
+}
+
+.task > div > div:first-of-type {
+    padding: 5px;
+}
+
+.task > div > div:nth-of-type(2) {
+    padding: 5px;   
+}
+
+.taskdescription {
+    color: white;
+    padding-top: 2px;
+}
+
+.taskcompletion {
+    color: white;
+    padding-top: 2px;
+}
+
+.footer {
+    /* margin: 10px 0 0 0; */
+    /* align-self: flex-end; */
+}
+
+#pages {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.edit--logout {
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto 0 auto;
+    width: 200px;
+}
+
+.log {
+    /* align-self: flex-end; */
+}
+
+#logout {
+    background-color: #B5C598;
+    cursor: pointer;
+}
+
+.editprofile {
+    margin: 0 0 0 10px;
+    cursor: pointer;
+    /* align-self: flex-end; */
+}
+
+.editprofile button {
+    cursor: pointer;
+}
+
+#edit {
+    background-color: #B5C598;
+}
+
+.pageNumber {
+    margin: 0 10px;
+    background-color:rgb(112, 46, 139); /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    /* text-align: center; */
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 12px;
+    /* align-self: center; */
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/other.css">
+    <link rel="stylesheet" href="./css/profile.css">
+</head>
+
+<body>
+    <div class="profile--container">
+        <div class="profile">
+            <p class="name"></p>
+            <p class="age"></p>
+            <p class="email"></p>
+            <img src="" alt="" class="image">
+        </div>
+
+        <div class="taskinput">
+            <form class="createtask">
+                <input placeholder="description" class="description input" autofocus>
+                {{!-- <input placeholder="completed" class="completed"> --}}
+                <button class="button">Create task</button>
+            </form>
+        </div>
+        <div id="tasklist">
+
+        </div>
+
+
+        <div class="footer">
+            <div id="pages">
+
+            </div>
+            <div class="edit--logout">
+                <div class="log">
+                    <button id="logout">Logout</button>
+                </div>
+                <div class="editprofile">
+                    <button id="edit">Edit profile</button>
+                </div>
+            </div>
+
+        </div>
+        <script src="/js/profile.js"></script>
+    </div>
+</body>
+
+</html>

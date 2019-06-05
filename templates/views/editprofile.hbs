@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/editProfile.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="editForm">
+            <div>
+                <p class="name">Name: </p>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <p class="email">E-mail:</p>
+                <input type="text" id="email">
+            </div>
+            <div>
+                <p class="password">Password:</p>
+                <input type="text" id="password" placeholder="password">
+            </div>
+            <div>
+                <p class="age">Age:</p>
+                <input type="text" id="age">
+            </div>
+            <button>Submit change</button>
+        </form>
+
+        <form id="imageForm">
+            <input type="file" name="avatar" id="myFile">
+            <input type="submit" class="imageButton" name="submit">
+        </form>
+
+
+    </div>
+
+    <script src="/js/editprofile.js"></script>
+</body>
+
+</html>

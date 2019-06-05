@@ -1,0 +1,41 @@
+.task {
+    width: 40%;
+    justify-content: center;
+}
+
+#editForm {
+    display: flex;
+    flex-direction: column; 
+}
+
+#completed {
+    /* height: 20px; */
+    width: 20%;
+    margin: 0 0 0 8px;
+}
+
+.input {
+    width: 100%;
+}
+
+.button {
+    margin: 10px;
+    align-items: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+
+.task > .button {
+    /* color: red; */
+    /* margin: 0 auto;
+    align-items: center;
+    justify-content: center; */
+    display: block;
+    width: 40%;
+    align-self: center;
+    margin: 60px auto 0 auto;
+    cursor: pointer;
+    /* align-items: center; */
+    /* justify-content: center; */
+}

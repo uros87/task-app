@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-image: url('../images/pencil.jpg');
+    /* color: white; */
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/pencil.jpg');
+    background-origin: border-box;
+    background-attachment: fixed;
+    /* background-position: cover; */
+    /* background-repeat: no-repeat; */
+    background-position: center bottom 90%;
+}
+
+.register {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login {
+    width: 100%;
+    margin-top: 30px
+}
+
+.button {
+    background-color:rgb(112, 46, 139); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    /* text-align: center; */
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 16px;
+    cursor: pointer;
+    /* align-self: center; */
+}
+
+.button:hover {
+    background-color:rgb(73, 8, 100);
+    cursor: pointer;
+}
+
+.register--button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.createuser--div {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+}
+
+.loginuser--div {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+}
+
+.login--button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.input {
+    width: 20%;
+    padding: 15px 22px;
+    margin: 10px 5px;
+    box-sizing: border-box;  
+    border: 2px solid #8842d5;
+    border-radius: 5px; 
+}
+
+.input:focus {
+    background-color:#B5C598;
+    color: black;
+    font-size: 24px;
+}

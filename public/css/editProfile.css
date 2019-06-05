@@ -1,0 +1,52 @@
+#editForm {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#editForm input {
+    width: 300px;
+    height: 40px;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+
+#editForm button {
+    margin: 40px auto 0 auto;
+    width: 30%;
+    background-color:rgb(112, 46, 139); /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+#imageForm {
+    margin: 40px 0 0 0;
+}
+
+#myFile {
+    /* background-color:rgb(112, 46, 139);  */
+}
+
+.name {
+    display: inline-block;
+    width: 70px;
+}
+
+.email {
+    display: inline-block;
+    width: 70px;
+}
+
+.password {
+    display: inline-block;
+    width: 70px;
+}
+
+.age {
+    display: inline-block;
+    width: 70px;
+}
