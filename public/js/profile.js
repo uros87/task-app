@@ -1,8 +1,8 @@
 // var skip = parseInt(sessionStorage.getItem('skip'));
-let numberOfTasks;
-let numberOfPages;
+// let numberOfTasks;
+// let numberOfPages;
 
-var userID;
+// var userID;
 
 //fetching user profile
 
@@ -17,8 +17,8 @@ const getProfile = function () {
         response.json().then((data) => {
             userID = data._id;
             // console.log(userID)
-            name.textContent = `Username: ${data.name}`
-            email.textContent = `Email: ${data.email}`
+            name.textContent = `${data.name}`
+            // email.textContent = `Email: ${data.email}`
 
             //fething user avatar
 
@@ -31,11 +31,15 @@ const getProfile = function () {
                 }).then((response) => {
                     return response.blob()
                 }).then((myBlob) => {
-
-                    var objectURL = URL.createObjectURL(myBlob);
-                    const image = document.querySelector('.image')
-                    image.src = objectURL
-
+                    if(myBlob.size !== 0){
+                        var objectURL = URL.createObjectURL(myBlob);
+                        const image = document.querySelector('.image')
+                        image.src = objectURL    
+                    }else{
+                        const image = document.querySelector('.image')
+                        image.src = '../images/Default-avatar.png'
+                    }
+                    
                 })
             }
             avatar()

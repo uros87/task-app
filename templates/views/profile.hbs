@@ -10,19 +10,21 @@
 
 <body>
     <div class="profile--container">
-        <div class="profile">
-            <p class="name"></p>
-            <p class="age"></p>
-            <p class="email"></p>
-            <img src="" alt="" class="image">
-        </div>
+        <div class="header">
+            <div class="taskinput">
+                <form class="createtask">
+                    <input placeholder="description" class="description input" autofocus>
+                    {{!-- <input placeholder="completed" class="completed"> --}}
+                    <button class="button">Create task</button>
+                </form>
+            </div>
+            <div class="profile">
+                <a href="http://localhost:3000/editprofile">
+                    <img src="" alt="" class="image">
+                    <p class="name"></p>
+                </a>
+            </div>
 
-        <div class="taskinput">
-            <form class="createtask">
-                <input placeholder="description" class="description input" autofocus>
-                {{!-- <input placeholder="completed" class="completed"> --}}
-                <button class="button">Create task</button>
-            </form>
         </div>
         <div id="tasklist">
 
