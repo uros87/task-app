@@ -11,7 +11,7 @@ const getProfile = function () {
     const age = document.querySelector('.age')
     const email = document.querySelector('.email')
 
-    fetch(`http://localhost:3000/users/me`, {
+    fetch(`https://brkic-task-app.herokuapp.com//me`, {
         credentials: 'include'
     }).then((response) => {
         response.json().then((data) => {
