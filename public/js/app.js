@@ -14,7 +14,7 @@ function postData(event) {
     const email = emailInput.value
     const password = passwordInput.value
 
-    fetch('http://localhost:3000/users', {
+    fetch('https://brkic-task-app.herokuapp.com/users', {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         credentials: 'include',
@@ -23,7 +23,7 @@ function postData(event) {
         response.json().then((data) => {
             console.log(data.token)
             document.cookie = `${data.token}`;
-            window.location.href = 'http://localhost:3000/profile';
+            window.location.href = 'https://brkic-task-app.herokuapp.com/profile';
         }).catch((e) => {
             console.log('existing')
             existingUser.innerHTML = 'Bad or existing username'
@@ -46,7 +46,7 @@ function postDatalogin(event) {
     const email = emailInputLogin.value
     const password = passwordInputLogin.value
 
-    fetch('http://localhost:3000/users/login', {
+    fetch('https://brkic-task-app.herokuapp.com/login', {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         credentials: 'include',
@@ -55,7 +55,7 @@ function postDatalogin(event) {
         response.json().then((data) => {
             console.log(data.token)
             document.cookie = `${data.token}`;
-            window.location.href = 'http://localhost:3000/profile';
+            window.location.href = 'https://brkic-task-app.herokuapp.com/profile';
         }).catch((e) => {
             badlog.innerHTML = 'Wrong username or password'
         })
