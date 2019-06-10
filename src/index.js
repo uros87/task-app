@@ -14,7 +14,7 @@ const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
 
 const port = process.env.PORT || 3000;
-//
+
 
 const multer = require('multer');
 const upload = multer({
@@ -24,10 +24,6 @@ const upload = multer({
 app.post('/upload', upload.single('upload'), (req, res) => {
     res.send()
 })
-
-
-
-//
 
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
