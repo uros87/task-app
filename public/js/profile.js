@@ -26,7 +26,7 @@ const getProfile = function () {
                 const imageDiv = document.querySelector('.profile')
 
 
-                fetch(`http://localhost:3000/users/${userID}/avatar`, {
+                fetch(`https://brkic-task-app.herokuapp.com/users/${userID}/avatar`, {
                     credentials: 'include',
                 }).then((response) => {
                     return response.blob()
@@ -64,7 +64,7 @@ const createTask = function () {
 
         const description = descriptionInput.value
 
-        fetch('http://localhost:3000/tasks', {
+        fetch('https://brkic-task-app.herokuapp.com/tasks', {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
             credentials: 'include',
@@ -111,7 +111,7 @@ const createTask = function () {
                 createTask.reset()
 
                 editButton.addEventListener('click', function () {
-                    window.location.href = `http://localhost:3000/editTask/${data._id}`;
+                    window.location.href = `https://brkic-task-app.herokuapp.com/editTask/${data._id}`;
                     // window.location.href = `http://localhost:3000/tasks/${task._id}`;
                     // console.log(task._id)
                 })
@@ -125,7 +125,7 @@ createTask()
 //fetching tasks
 
 const fetchingTasks = function (skip = 0) {
-    fetch(`http://localhost:3000/tasks?limit=5&skip=${skip}`, {
+    fetch(`https://brkic-task-app.herokuapp.com/tasks?limit=5&skip=${skip}`, {
         credentials: 'include'
     }).then((response) => {
         response.json().then((data) => {
@@ -171,7 +171,7 @@ const fetchingTasks = function (skip = 0) {
                 document.getElementById('tasklist').appendChild(node)
 
                 editButton.addEventListener('click', function () {
-                    window.location.href = `http://localhost:3000/editTask/${task._id}`;
+                    window.location.href = `https://brkic-task-app.herokuapp.com/editTask/${task._id}`;
                     // window.location.href = `http://localhost:3000/tasks/${task._id}`;
                     // console.log(task._id)
                 })
@@ -185,7 +185,7 @@ fetchingTasks()
 //fetching tasks just for number of tasks
 
 const fetchingTasksForNumber = function (skip = 0) {
-    fetch(`http://localhost:3000/tasks?limit=0&skip=0`, {
+    fetch(`https://brkic-task-app.herokuapp.com/tasks?limit=0&skip=0`, {
         credentials: 'include'
     }).then((response) => {
         response.json().then((data) => {
@@ -205,7 +205,7 @@ const fetchingTasksForNumber = function (skip = 0) {
                 button.addEventListener('click', () => {
                     document.getElementById('tasklist').innerHTML = ''
 
-                    fetch(`http://localhost:3000/tasks?limit=5&skip=${skipValue}`, {
+                    fetch(`https://brkic-task-app.herokuapp.com/tasks?limit=5&skip=${skipValue}`, {
                         credentials: 'include'
                     }).then((response) => {
                         response.json().then((data) => {
@@ -252,7 +252,7 @@ const fetchingTasksForNumber = function (skip = 0) {
                                 document.getElementById('tasklist').appendChild(node)
 
                                 editButton.addEventListener('click', function () {
-                                    window.location.href = `http://localhost:3000/editTask/${task._id}`;
+                                    window.location.href = `https://brkic-task-app.herokuapp.com/editTask/${task._id}`;
                                     // window.location.href = `http://localhost:3000/tasks/${task._id}`;
                                     console.log(task._id)
                                 })
@@ -279,7 +279,7 @@ fetchingTasksForNumber()
 const logoOut = function () {
     const button = document.getElementById('logout')
     button.addEventListener('click', function () {
-        fetch('http://localhost:3000/users/logout', {
+        fetch('https://brkic-task-app.herokuapp.com/users/logout', {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
             credentials: 'include',
@@ -296,7 +296,7 @@ logoOut()
 const editProfile = function () {
     const editProfileButton = document.getElementById('edit')
     editProfileButton.addEventListener('click', () => {
-        window.location.href = 'http://localhost:3000/editprofile'
+        window.location.href = 'https://brkic-task-app.herokuapp.com/editprofile'
     })
 
 }
