@@ -46,7 +46,7 @@ function postDatalogin(event) {
     const email = emailInputLogin.value
     const password = passwordInputLogin.value
 
-    fetch('https://brkic-task-app.herokuapp.com/login', {
+    fetch('https://brkic-task-app.herokuapp.com/users/login', {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         credentials: 'include',
