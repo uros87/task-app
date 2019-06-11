@@ -20,6 +20,9 @@ const multer = require('multer');
 const upload = multer({
     dest: 'images'
 })
+const cors = require('cors');
+app.use(cors())
+
 
 app.post('/upload', upload.single('upload'), (req, res) => {
     res.send()
