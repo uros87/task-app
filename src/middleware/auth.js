@@ -8,7 +8,7 @@ const auth = async (req, res, next) => {
         // const decoded = jwt.verify(token, 'uros')
 
         const token = req.headers.cookie
-        const decoded = jwt.verify(token, 'uros')
+        const decoded = jwt.verify(token, process.env.JWT_SECRET)
 
         //this was added between  comment lines, above is old code
         const user = await User.findOne({ _id: decoded._id, 'tokens.token': token })
@@ -26,4 +26,5 @@ const auth = async (req, res, next) => {
 }
 
 module.exports = auth
+
 
