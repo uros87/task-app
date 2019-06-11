@@ -284,7 +284,7 @@ const logoOut = function () {
             headers: { 'Content-type': 'application/json' },
             credentials: 'include',
         }).then((response) => {
-            window.location.href = 'http://localhost:3000'
+            window.location.href = 'https://brkic-task-app.herokuapp.com'
         })
     })
 }
