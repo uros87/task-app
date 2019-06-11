@@ -4,7 +4,7 @@ const emailInput = document.querySelector('#email')
 const passwordInput = document.querySelector('#password')
 const editForm = document.querySelector('#editForm')
 
-fetch(`https://brkic-task-app.herokuapp.com/users/me`, {
+fetch(`/users/me`, {
     credentials: 'include'
 }).then((response) => {
     response.json().then((data) => {
@@ -27,25 +27,25 @@ function postData(event) {
 
 
     if (!password) {
-        fetch('https://brkic-task-app.herokuapp.com/users/me', {
+        fetch('/users/me', {
             method: 'PATCH',
             headers: { 'Content-type': 'application/json' },
             credentials: 'include',
             body: JSON.stringify({ name: name, age: age, email: email })
         }).then((response) => {
             response.json().then((data) => {
-                window.location.href = 'https://brkic-task-app.herokuapp.com/profile';
+                window.location.href = '/profile';
             })
         });
     } else {
-        fetch('https://brkic-task-app.herokuapp.com/users/me', {
+        fetch('/users/me', {
             method: 'PATCH',
             headers: { 'Content-type': 'application/json' },
             credentials: 'include',
             body: JSON.stringify({ name: name, age: age, email: email, password: password })
         }).then((response) => {
             response.json().then((data) => {
-                window.location.href = 'https://brkic-task-app.herokuapp.com/profile';
+                window.location.href = '/profile';
             })
         });
     }
@@ -62,12 +62,12 @@ function uploadPicture(event) {
     
     event.preventDefault()
     
-    fetch(`https://brkic-task-app.herokuapp.com/users/me/avatar`, {
+    fetch(`/users/me/avatar`, {
         method: 'POST',
         credentials: 'include',
         body: new FormData(pictureForm)
     }).then((response) => {
-        window.location.href = 'https://brkic-task-app.herokuapp.com/profile';
+        window.location.href = '/profile';
     });
 
 }

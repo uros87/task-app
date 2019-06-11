@@ -9,7 +9,7 @@ const editForm = document.querySelector('#editForm')
 
 
 //fetching task
-fetch(`https://brkic-task-app.herokuapp.com/tasks/${id}`, {
+fetch(`/tasks/${id}`, {
     credentials: 'include'
 }).then((response) => {
     response.json().then((data) => {
@@ -28,7 +28,7 @@ function postData(event) {
     const description = descriptionField.value
     const completed = completedField.value
 
-    fetch(`https://brkic-task-app.herokuapp.com/tasks/${id}`, {
+    fetch(`/tasks/${id}`, {
             method: 'PATCH',
             headers: { 'Content-type': 'application/json' },
             credentials: 'include',
@@ -36,7 +36,7 @@ function postData(event) {
         }).then((response) => {
             response.json().then((data) => {
                 console.log(data)
-                window.location.href = 'https://brkic-task-app.herokuapp.com/profile';
+                window.location.href = '/profile';
             })
         });
 }
@@ -44,11 +44,11 @@ function postData(event) {
 //deleting a task
 const deleteButton = document.querySelector('#deleteTask')
 deleteButton.addEventListener('click', function(){
-    fetch(`https://brkic-task-app.herokuapp.com/tasks/${id}`, {
+    fetch(`/tasks/${id}`, {
         method: 'DELETE',
         headers: { 'Content-type': 'application/json' },
         credentials: 'include',
     }).then((response) => {
-        window.location.href = 'https://brkic-task-app.herokuapp.com/profile';
+        window.location.href = '/profile';
     });
 })
