@@ -7,7 +7,7 @@
 //fetching user profile
 
 const getProfile = function () {
-    const name = document.querySelector('.name')
+    const name = document.querySelector('.profile__name')
     const age = document.querySelector('.age')
     const email = document.querySelector('.email')
 
@@ -54,8 +54,8 @@ getProfile()
 //Create task
 
 const createTask = function () {
-    const createTask = document.querySelector('.createtask')
-    const descriptionInput = document.querySelector('.description')
+    const createTask = document.querySelector('.form')
+    const descriptionInput = document.querySelector('.form__input--taskdescription')
 
     createTask.addEventListener('submit', postData);
 
@@ -263,7 +263,7 @@ const fetchingTasksForNumber = function (skip = 0) {
                     console.log(i)
                 })
 
-                document.getElementById('pages').appendChild(node)
+                document.getElementById('footer__pages').appendChild(node)
             }
         })
     })

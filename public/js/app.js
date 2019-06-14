@@ -1,6 +1,6 @@
 //for creating a new user
 const createUserForm = document.querySelector('.createuser');
-const nameInput = document.querySelector('.name')
+const nameInput = document.querySelector('.profile__name')
 const emailInput = document.querySelector('.e-mail')
 const passwordInput = document.querySelector('.password')
 const existingUser = document.querySelector('.userexists') 
