@@ -8,7 +8,7 @@ const auth = async (req, res, next) => {
         // const decoded = jwt.verify(token, 'uros')
 
         const token = req.headers.cookie
-        const decoded = jwt.verify(token, process.env.JWT_SECRET)
+        const decoded = jwt.verify(token, process.env.JWT_SECRET || 'uros')
 
         //this was added between  comment lines, above is old code
         const user = await User.findOne({ _id: decoded._id, 'tokens.token': token })
@@ -27,4 +27,6 @@ const auth = async (req, res, next) => {
 
 module.exports = auth
 
+
+//treba da promenimo process.env kako bi nam funkcionisalo i u lokalu
 
