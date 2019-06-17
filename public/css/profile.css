@@ -186,7 +186,23 @@
 
 
 
+@media(max-width: 768px){
+    .profile--container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
 
+    .task {
+        width: 100%;
+    }
+
+    .form__input--taskdescription {
+        width: 100%;
+    }
+}
 
 
 
