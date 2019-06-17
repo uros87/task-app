@@ -102,10 +102,6 @@ body {
 }
 
 @media(max-width: 768px){
-    .container {
-        height: fit-content;
-    }
-
     .createuser--div {
         display: flex;  
         flex-direction: column;
