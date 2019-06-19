@@ -145,6 +145,7 @@
     flex-direction: row;
     margin: 10px auto 0 auto;
     width: 180px;
+    justify-content: center;
 }
 
 .log {
@@ -195,13 +196,41 @@
         margin: 0 auto;
     }
 
+    #tasklist {
+        height: 80%;
+    }
+
     .task {
         width: 100%;
+        flex-direction: column;
     }
 
     .form__input--taskdescription {
         width: 100%;
     }
+
+    .header {
+        margin: 5px 0 0 0;
+    }
+
+    .header__taskinput {
+        width: 100%;
+    }
+    .form {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .button {
+        padding: 5px 10px;
+    }
+
+    .profile > a {
+        display: none;
+    }
+
+
 }
 
 

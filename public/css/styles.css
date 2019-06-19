@@ -101,6 +101,18 @@ body {
     font-size: 24px;
 }
 
+.badcredentials {
+    padding: 10px 0 0 0;
+    color: red;
+    opacity: 1 !important;
+    transform: translateY(0) !important;  
+}
+
+.userexists {
+    color: red;
+    padding: 10px 0 0 0;
+}
+
 @media(max-width: 768px){
     .createuser--div {
         display: flex;  

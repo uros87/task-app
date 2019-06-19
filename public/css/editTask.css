@@ -39,3 +39,15 @@
     /* align-items: center; */
     /* justify-content: center; */
 }
+
+
+@media(max-width: 768px){
+    .task {
+        width: 100%;
+    }
+
+    .input {
+        width: 96%;
+        margin: 0 auto;
+    }
+}

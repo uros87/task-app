@@ -50,3 +50,10 @@
     display: inline-block;
     width: 70px;
 }
+
+
+@media(max-width: 768px){
+    #editForm > div > p{
+        display: block;
+    }
+}
