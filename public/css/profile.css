@@ -42,8 +42,8 @@
     
     /* make a square container */
     display: block;
-    width: 35px;
-    height: 35px;
+    width: 42px;
+    height: 42px;
     margin: 5px auto 0 auto;
     /* fill the container, preserving aspect ratio, and cropping to fit */
     background-size: cover;
